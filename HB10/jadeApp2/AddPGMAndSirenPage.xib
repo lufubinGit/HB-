@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddPGMAndSirenPage">
+            <connections>
+                <outlet property="OKbutton" destination="CfS-nG-GF2" id="zfL-VY-YXS"/>
+                <outlet property="textF" destination="gpB-R5-abz" id="IDg-uj-mGw"/>
+                <outlet property="tipLabel" destination="VFx-El-2EN" id="hec-Cf-RBM"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfS-nG-GF2">
+                    <rect key="frame" x="19.5" y="329" width="337.5" height="42.5"/>
+                    <color key="backgroundColor" red="0.67198350694444442" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="CfS-nG-GF2" secondAttribute="height" multiplier="8:1" id="aWj-cL-nJ5"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="OkSend:" destination="-1" eventType="touchUpInside" id="T4y-Fn-nUy"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gpB-R5-abz">
+                    <rect key="frame" x="19.5" y="257.5" width="337.5" height="41.5"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFx-El-2EN">
+                    <rect key="frame" x="10" y="20" width="355" height="217.5"/>
+                    <mutableString key="text">Before connecting the siren and PGM to the gateway, you must enter any of its ID numbers consisting of at least 5 digits (for example 55555) and press the \"I confirm\" button below after entering. After successfully entering the siren / PGM identification number, press the MOD / SENS button on the siren / PGM for 3 seconds, the siren / PGM will enter the programming mode. Next, to bind the HUB to the siren / PGM, you need to remove or arm the HUB (via this application). After these actions, your siren / PGM will emit a \"Di\" signal - it means it is registered in your HUB and will be displayed in the list of installed sensors.</mutableString>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="CfS-nG-GF2" firstAttribute="top" secondItem="gpB-R5-abz" secondAttribute="bottom" constant="30" id="9Co-WO-GEy"/>
+                <constraint firstItem="gpB-R5-abz" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.9" id="ACp-rN-P8s"/>
+                <constraint firstItem="VFx-El-2EN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="Fwn-Gx-ZgJ"/>
+                <constraint firstItem="CfS-nG-GF2" firstAttribute="centerX" secondItem="gpB-R5-abz" secondAttribute="centerX" id="Jcs-UR-rVy"/>
+                <constraint firstAttribute="trailing" secondItem="VFx-El-2EN" secondAttribute="trailing" constant="10" id="N4Z-4r-CL0"/>
+                <constraint firstItem="gpB-R5-abz" firstAttribute="top" secondItem="VFx-El-2EN" secondAttribute="bottom" constant="20" id="QZM-pc-dE1"/>
+                <constraint firstItem="VFx-El-2EN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="Xgi-q5-6ap"/>
+                <constraint firstItem="CfS-nG-GF2" firstAttribute="width" secondItem="gpB-R5-abz" secondAttribute="width" id="ccK-Gb-4Ug"/>
+                <constraint firstItem="gpB-R5-abz" firstAttribute="height" secondItem="CfS-nG-GF2" secondAttribute="height" id="nOl-Q5-7ft"/>
+                <constraint firstItem="gpB-R5-abz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="s5q-FU-7bj"/>
+            </constraints>
+            <point key="canvasLocation" x="25.5" y="51.5"/>
+        </view>
+    </objects>
+</document>

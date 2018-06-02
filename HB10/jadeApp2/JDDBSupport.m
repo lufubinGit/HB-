@@ -1,0 +1,100 @@
+//
+//  JDDBSupport.m
+//  jadeApp2
+//
+//  Created by JD on 2016/10/28.
+//  Copyright © 2016年 JaDe Coupling sensor Technology Co., Ltd. All rights reserved.
+//
+
+#import "JDDBSupport.h"
+#import "NSObject+GetAllProp.h"
+
+@implementation JDDBSupport
+
+- (id)initWithSaveID:(NSString *)saveId{
+
+    static JDDBSupport *tool = nil;
+    //选定路径
+    NSString *doc=[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *fileName = [doc stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.sqlite",saveId]];
+    //2.获得数据库
+    tool = [JDDBSupport databaseWithPath:fileName];
+    return tool;
+}
+
+- (BOOL)openTableFor:(id) object{
+
+    if([self open]){
+        //4.创表
+        NSArray *propArr = [self getAllProp:[object class]];
+        NSString *str = [NSString stringWithFormat:@""];
+        
+        
+        
+        BOOL result = [self executeUpdate:@"CREATE TABLE IF NOT EXISTS JDRecord (id integer PRIMARY KEY AUTOINCREMENT, name text NOT NULL, timers text NOT NULL, contents text NOT NULL)"];
+        if (result) {
+            NSLog(@"创表成功");
+            return YES;
+        }else{
+            NSLog(@"创表失败");
+            return NO;
+        }
+    }else{
+        return NO;
+    }
+}
+
+//插入数据
+-(void)insertRecordWithArr:(NSArray *)arr
+{
+    
+    [self executeUpdate:@"INSERT INTO JDRecord (name,timers,contents) VALUES (?, ?,?)",arr[0], arr[1],arr[2]];
+    
+//    for (int i = 0; i<10; i++) {
+//        NSString *name = [NSString stringWithFormat:@"jack-%d", arc4random_uniform(100)];
+//        // executeUpdate : 不确定的参数用?来占位
+//        [self executeUpdate:@"INSERT INTO t_student (name,timer,content) VALUES (?, ?,?);", name, @(arc4random_uniform(40))];
+//        //        [self.db executeUpdate:@"INSERT INTO t_student (name, age) VALUES (?, ?);" withArgumentsInArray:@[name, @(arc4random_uniform(40))]];
+//        
+//        // executeUpdateWithFormat : 不确定的参数用%@、%d等来占位
+//        //        [self.db executeUpdateWithFormat:@"INSERT INTO t_student (name, age) VALUES (%@, %d);", name, arc4random_uniform(40)];
+//    }
+}
+
+//删除数据
+-(void)deleteRecordArr:(NSArray *)arr
+{
+        if([self executeUpdate:@"delete from JDRecord where name = '%@'",arr[0]])
+        {
+        
+            NSLog(@"%@",arr);
+        }
+    
+    
+//    [self executeUpdate:@"DROP TABLE IF EXISTS t_student;"];
+//    [self executeUpdate:@"CREATE TABLE IF NOT EXISTS t_student (id integer PRIMARY KEY AUTOINCREMENT, name text NOT NULL, age integer NOT NULL);"];
+}
+
+//查询
+- (NSMutableArray *)queryRecord
+{
+    // 1.执行查询语句
+    FMResultSet *resultSet = [self executeQuery:@"SELECT * FROM JDRecord"];
+    NSMutableArray *mutArr = [NSMutableArray array];
+    // 2.遍历结果
+    while ([resultSet next]) {
+        int ID = [resultSet intForColumn:@"id"];
+        NSString *name = [resultSet stringForColumn:@"name"];
+        NSString *timer = [resultSet stringForColumn:@"timers"];
+        NSString *content = [resultSet stringForColumn:@"contents"];
+        NSLog(@"%d %@ %@ %@", ID, name,timer,content );
+        [mutArr addObject:name];
+        [mutArr addObject:timer];
+        [mutArr addObject:content];
+        NSLog(@"%@",mutArr);
+    }
+    return mutArr;
+}
+
+@end
+

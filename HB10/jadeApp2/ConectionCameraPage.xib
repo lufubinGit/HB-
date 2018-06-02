@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConectionCameraPage">
+            <connections>
+                <outlet property="conectionCamera" destination="vUc-ye-fon" id="dge-0r-tQT"/>
+                <outlet property="conectionTitle" destination="GgO-Ql-xgN" id="TyZ-KJ-OZO"/>
+                <outlet property="searchLan" destination="MHH-qJ-J6c" id="J0r-az-jyk"/>
+                <outlet property="searchTitle" destination="D1n-US-uYe" id="Hq1-H8-Ztn"/>
+                <outlet property="tipTitle" destination="cNf-CD-14b" id="zcZ-lw-MW9"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请选择一种合适的连接方式" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNf-CD-14b">
+                    <rect key="frame" x="10" y="139" width="355" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHH-qJ-J6c">
+                    <rect key="frame" x="234.5" y="220" width="94" height="94"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="MHH-qJ-J6c" secondAttribute="height" id="fBu-kr-1s3"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="JADE_camera_add_Lan"/>
+                    <connections>
+                        <action selector="lanSearch:" destination="-1" eventType="touchUpInside" id="VKp-Rr-jJs"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUc-ye-fon">
+                    <rect key="frame" x="47" y="220" width="94" height="94"/>
+                    <state key="normal" backgroundImage="JADE_camera_add_wifi"/>
+                    <connections>
+                        <action selector="wifiConnection:" destination="-1" eventType="touchUpInside" id="DcT-Bg-ELN"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="智能联机" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GgO-Ql-xgN">
+                    <rect key="frame" x="0.0" y="324" width="188" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="添加互联网设备" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1n-US-uYe">
+                    <rect key="frame" x="187" y="324" width="188" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="GgO-Ql-xgN" firstAttribute="centerX" secondItem="vUc-ye-fon" secondAttribute="centerX" id="AHF-dK-O4e"/>
+                <constraint firstItem="MHH-qJ-J6c" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="0.8" id="EBd-K5-jP8"/>
+                <constraint firstItem="GgO-Ql-xgN" firstAttribute="centerY" secondItem="D1n-US-uYe" secondAttribute="centerY" id="GTj-xS-lt8"/>
+                <constraint firstItem="MHH-qJ-J6c" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="3:2" id="I60-Bh-feq"/>
+                <constraint firstItem="D1n-US-uYe" firstAttribute="top" secondItem="MHH-qJ-J6c" secondAttribute="bottom" constant="10" id="JKx-P4-FbS"/>
+                <constraint firstItem="vUc-ye-fon" firstAttribute="height" secondItem="MHH-qJ-J6c" secondAttribute="height" id="Nd9-K7-tZK"/>
+                <constraint firstItem="vUc-ye-fon" firstAttribute="centerY" secondItem="MHH-qJ-J6c" secondAttribute="centerY" id="RG0-z5-vVD"/>
+                <constraint firstItem="vUc-ye-fon" firstAttribute="top" secondItem="cNf-CD-14b" secondAttribute="bottom" constant="60" id="SAY-I6-gIh"/>
+                <constraint firstItem="MHH-qJ-J6c" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="1:4" id="Vzp-qw-jPk"/>
+                <constraint firstItem="vUc-ye-fon" firstAttribute="width" secondItem="MHH-qJ-J6c" secondAttribute="width" id="X3a-l8-xbk"/>
+                <constraint firstItem="cNf-CD-14b" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="dha-hw-SCI"/>
+                <constraint firstItem="D1n-US-uYe" firstAttribute="centerX" secondItem="MHH-qJ-J6c" secondAttribute="centerX" id="hFS-tN-zce"/>
+                <constraint firstItem="vUc-ye-fon" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="1:2" id="li1-PT-hLd"/>
+                <constraint firstAttribute="trailing" secondItem="cNf-CD-14b" secondAttribute="trailing" constant="10" id="mp1-tb-TWH"/>
+                <constraint firstItem="GgO-Ql-xgN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uk9-we-6Bz"/>
+                <constraint firstAttribute="trailing" secondItem="D1n-US-uYe" secondAttribute="trailing" id="wCL-g2-Khb"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="JADE_camera_add_Lan" width="28" height="28"/>
+        <image name="JADE_camera_add_wifi" width="28" height="28"/>
+    </resources>
+</document>

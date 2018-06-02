@@ -1,0 +1,12 @@
+
+/* Class = "UITabBarItem"; title = "设备"; ObjectID = "2La-x6-UvV"; */
+"2La-x6-UvV.title" = "设备";
+
+/* Class = "UITabBarItem"; title = "用户中心"; ObjectID = "OxM-ZP-e2W"; */
+"OxM-ZP-e2W.title" = "用户中心";
+
+/* Class = "UITabBarItem"; title = "设置11"; ObjectID = "Xsd-bO-hsf"; */
+"Xsd-bO-hsf.title" = "设置11";
+
+/* Class = "UILabel"; text = "点击头像查看二维码"; ObjectID = "eJx-x8-dqA"; */
+"eJx-x8-dqA.text" = "点击头像查看二维码";

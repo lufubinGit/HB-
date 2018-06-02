@@ -1,0 +1,445 @@
+/*
+  Localizable.strings
+  jadeApp2
+
+  Created by 卢赋斌 on 16/9/6.
+  Copyright © 2016年 JaDe Coupling sensor Technology Co., Ltd. All rights reserved.
+*/
+
+// APP 中的本地化   默认是英文的
+
+//用户中心
+"About" = "关于";
+"Privacy Policy" = "隐私政策";
+"Version Information" = "版本信息";
+"Sign in" = "登录";
+"Camera shot" = "相机拍摄";
+"Select from album" = "相册中获取";
+"Get a picture of the source" = "获取图片作为头像";
+"Preview Avatar" = "头像预览";
+"You need to log in before you can do this" = "请先登录";
+"User" = "用户";
+"Replacement account" = "切换用户";
+"Format password" = "重置密码";
+"Modify password" = "修改密码";
+"  Click to replace the picture  " = "  点击头像可编辑  ";
+"Are you sure exit the current account?" = "确定退出当前账号？";
+"User PhoneNum" = "手机号／邮箱";
+"Acount" = "账户名";
+"Exit login" = "注销";
+"Select the Reset Type" = "选择重置密码的方式";
+"Reset the password by registered email" = "通过邮箱重置密码";
+"Reset the password by registered phone number" = "通过电话号码重置密码";
+
+//密码和重置界面
+"get test code" = "获取验证码";
+"Please enter the registration and email or mobile phone number, the system will send you the verification code, fill in the mailbox or through the mobile phone to receive the verification code, complete the password reset" = "请输入注册的手机号码或者邮箱，系统会向您发送验证，填写邮箱或通过手机接收验证码，完成密码重置";
+"input testCode" = "验证码";
+"Plaease input your phoneNum" = "输入手机号码";
+"Plaease input your email" = "输入邮箱";
+"Please enter the code" = "输入验证码";
+"input new" = "输入新密码";
+"input newPassword" = "输入新密码";
+"check newPassword" = "检验新密码";
+"Two passwords are not consistent" = "两次输入的密码不一致";
+"Please enter a password above six characters" = "密码至少包含6个字符";
+"CurrentPassword" = "当前密码";
+"You are modifying the password, modify the password need to line the current password authentication, after the completion of the input, click on the next step." = "您正在修改密码，修改密码需要行当前密码验证，完成输入后，点击下一步。";
+"Please input current password" = "请输入原始密码";
+"The original password is wrong, if you forget the password, you can use the phone to reset the password." = "原始密码错误，如果忘记密码，可以使用手机重置密码。";
+"please enter the phoneNum" = "请输入手机号";
+"please enter the E-mail" = "请输入邮箱";
+"Has sent a message to your mailbox, please login the mailbox to complete the reset password verification operation." = "已经发送邮件至您的邮箱，请登陆邮箱完成重置密码的验证操作。";
+
+
+//注册页面
+"Your cell phone number" = "输入您的电话号码";
+"Your E-mail" = "输入您的邮箱";
+"Please enter the account password" = "请设置账号密码";
+"Check the password" = "再次输入密码";
+"Input code" = "输入验证码";
+"Send code" = "发送验证码";
+"Registers" = "注册";
+"phonNnumber can not be empty" = "电话号码不能为空";
+"Please enter a password" = "请输入密码";
+"Please enter verification code" = "请输入验证码";
+"Please enter a duplicate password" = "请输入确认密码";
+"Wait" = "等待";
+"E-mail format is incorrect" = "邮箱格式错误";
+"The two passwords are not the same" = "两次输入的密码不一致";
+"After registration, the user name can not be modified" = "*注册之后，用户名将不能修改";
+//登陆页面
+"Register" = "立即注册";
+"forget" = "忘记密码";
+"Your Accout" = "输入账户名";
+"Your password"  = "账户密码";
+"Account can not be empty" = "账户不能为空";
+"Password can not be empty" = "密码不能为空";
+"Skip Login" = "跳过登录";
+"Select the registration type" = "选择注册类型";
+"Register by phone number" = "通过手机号码注册";
+"Register by email" = "通过邮箱注册";
+"Select the Recall the password type" = "选择找回密码的方式";
+"Recall by registered phone number" = "通过注册手机号码找回密码";
+"Recall by registered email" = "通过注册邮箱找回密码";
+//根目录
+"UserCenter" = "用户中心";
+"Setting" = "设置";
+"Product introduce" = "企业产品介绍";
+"Feed Back" = "反馈";
+"Other" = "其他";
+"No user" = "未登录用户";
+
+//网关设置
+"gateway setting" = "网关设置";
+"GetwayName" = "网关名字";
+"Whistle" = "警号";
+"Sub device add switch" = "子设备开关";
+"Arming delay" = "布防延时";
+"Alarm delay" = "报警延时";
+"Alarm time length" = "报警时长";
+"Gateway IP" = "网关IP";
+"Connection on WIFI" = "连接WI-FI";
+"delete" = "删除";
+"share device" = "分享设备";
+"Are you sure you want to delete the device." = "是否确定删除当前的设备？";
+"Use another user to scan the QR code to gain permission on the device" = "请使用其他用户扫描该二维码，以获取该设备的权限";
+"State" = "状态";
+"Armaway" = "外出布防";
+"ArmStay" = "在家布防";
+"Disarm" = "撤防";
+"delay time" = "延时";
+"Numerical range" = "数值范围";
+"Device hardware information" = "设备硬件信息";
+"Get hardware information..." = "获取硬件信息...";
+"mac" = "mac地址";
+"pk" = "PK码";
+"Alarm numbers" = "报警号码";
+"Push language" = "推送语言";
+"Choose push language" = "选择推送语言";
+
+//电话号码设置的界面
+"Preset phone number" = "预设电话号码";
+"Dialing alarm" = "拨号报警";
+"SMS alarm" = "短信报警";
+"Eidt" = "编辑";
+"Please enter the correct phone number." = "请输入正确的电话号码。";
+"You can add up to six phone numbers." = "最多可添加六个电话号码。";
+"Add a phone number." = "添加电话号码。";
+"Enter the phone number you want to add." = "输入要添加的电话号码。";
+"Send alarm message only when the host is not Wi-Fi" = "仅在主机非Wi-Fi的状态下发送报警短信";
+
+//网关名字设定
+"  Set Gateway Name" = "设置网关名";
+"Rename the gateway, and set up unused device names to identify the different devices." = "给网关重命名，设置不用的设备名以辨别不同的设备。";
+"Save" = "保存";
+"Set Gateway Name" = "设置网关名";
+"Please enter a new name for the device" = "请设置一个名字";
+
+
+//添加设备时提示用户按设备
+"Press and hold the device reset button until the device prompt is flashing, and then click Next to start connecting to Wi-Fi." = "请连续单按5下设备重置按钮，然后长按直至设备提示灯变成快闪状态，再点击“下一步”开始连接Wi-Fi";
+
+"The above steps have been completed" = "已经完成上述步骤";
+
+//二维码扫面界面
+"The two-dimensional code into the scan box." = "将二维码放入扫描框中";
+"GO" = "开始";
+"QR code" = "扫描二维码";
+"No camera permissions" = "没有摄像头权限";
+"Please turn on the camera permissions for 'Iot-Alarm'APP' in the phone's settings." = "请在手机的设置中，开启‘Iot-Alarm’APP的相机权限。";
+
+//添加设备界面
+"Gateway network configuration：" = "配置网关网络：";
+"Please enter Wi-Fi password" = "请输入Wi-Fi密码";
+"Make sure that the gateway / host is restored to factory settings (green light is flashing). If the gateway / host is connected to the network, make sure the phone and gateway are in the same WIfi. If the gateway / host is not connected to the network and has not been reset to factory settings, see how the instructions work." = "请添加前保证网关／主机已经恢复出厂设置（绿灯快闪），如果网关／主机已经连接到网络，请保证手机和网关在同一个WIfi下。如果网关／主机未连接到网络又未恢复出厂设置，请查看说明书如何操作。";
+
+//设备连接界面
+"Connection failure, please use the phone to connect the device hot spots, enter the SoftAP Direct Connect ..." = "连接失败，请使用手机连接设备热点,进入SoftAP直连...";
+"search again" = "重新搜索";
+"Search for devices" =  "搜索周边设备";
+"Discovery equipment" = "发现设备";
+"Start" = "开始搜索";
+"Please wait while the peripheral equipment is being scanned. If the device is not found at the end of the countdown, you can choose to re-search or enter the SoftAP connection mode." = "当前正在扫码周边设备，请耐心等待。如果倒计时结束依然没有找到设备，您可以选择重新搜索或者进入SoftAP手机直连模式连接设备。";
+"Into SoftAP" = "进入直连";
+"Add device" = "添加设备";
+"WI-FI is not connected" = "未连接WI-FI";
+
+//softAP 界面
+"Please connect your phone with\" Settings \" - \"Wireless LAN \" to connect to the device hotspot. The device hotspot contains \" %@ \"field." =  "请先将你的手机连 \"设置\" - \"无线局域网\" 中接设备的热点，设备热点包含\" %@ \"字段。";
+
+"Please connect equipment hot spots, now go to connect?" = "请先连接设备热点，现在就去连接吗？";
+"SoftAP direct connection ..." = "softAP直连中...";
+"SoftAP" = "设备直连";
+"Ensure that the currently connected WI-FI hotspot is device-owned (contains the XPG-GAent field). Click on the bottom of the \"next\", the direct connection." = "确保当前连接的WI-FI热点是设备所有，（包含XPG-GAent字段）。点击下方“下一步”，进行直连。";
+
+//未绑定设备界面
+"Unbound device" = "未绑定设备";
+"Binding" = "绑定";
+"If the device needs to be bound, power off the device and restart the device after the device is started for five minutes." = "设备在启动五分钟后绑定将会不成功， 如果需要绑定请断电重新启动设备。";
+"There are currently no unbound devices." = "当前没有未绑定的设备。";
+
+
+//子设备添加界面
+"LOADING" = "请稍后...";
+"Device found" = "发现设备数量";
+"Add sub device" = "添加子设备";
+"Please ensure that the device is connected to the device to be accessed, and then click OK to connect to the device." = "请确保周边的设备进入待接入状态，然后点击确认进行连接。";
+"tip" = "提示";
+"Start the connection" = "开始连接";
+
+"Before connecting the siren and PGM to the gateway, you must enter any of its ID numbers consisting of at least 5 digits (for example 55555) and press the \"I confirm\" button below after entering. After successfully entering the siren / PGM identification number, press the MOD / SENS button on the siren / PGM for 3 seconds, the siren / PGM will enter the programming mode. Next, to bind the HUB to the siren / PGM, you need to remove or arm the HUB (via this application). After these actions, your siren / PGM will emit a \"Di\" signal - it means it is registered in your HUB and will be displayed in the list of installed sensors." =  "将警笛和PGM连接到网关之前，必须输入任何由至少5位数字组成的ID号码（例如55555），并在输入后按下面的“我确认”按钮。成功输入警号/ PGM识别码后，按下警号/PGM上的MOD/SENS 键3秒钟，警号/ PGM将进入编程模式。接下来，要将主机绑定到警笛/ PGM，您需要移除或布防HUB（通过此应用程序）。在这些动作之后，您的警笛/PGM将发出“Di”信号 - 这意味着它已在您的HUB中注册并将显示在安装的传感器列表中。";
+
+//主页面
+"Add more subdevice" = "添加子设备";
+"Online" = "在线";
+"Offline" = "离线";
+"Scan the surrounding devices" = "连接周边设备";
+"Add detector" = "添加探测器";
+"Add sharing device" = "添加分享设备";
+"Add the camera" = "添加监控摄像头";
+"Scan QR code" = "扫描二维码";
+"LAN online device" = "局域网在线设备";
+"setting armState..." = "设置状态中";
+"disarm" = "撤防";
+"armaway" = "外出布防";
+"armstay" = "在家布防";
+"record" = "历史记录";
+"setting" = "设置";
+"Device" = "设备";
+"You can choose one of the following ways to add equipment." = "选择以下一种方式添加设备";
+"The device is offline. If you remove the device, you can not obtain real-time information about the device after the device goes online. Are you sure you want to delete the device ?" = "设备当前离线。如果删除设备，则在设备上线后无法获取设备的实时信息。 您确定要删除设备吗？";
+"Number of managed devices:" = "子设备数量：" ;
+"No online devices" = "没有在线设备";
+"No offline devices" = "没有离线设备";
+
+//设置界面
+"Go set" = "去设置";
+"Invite you to use." = "邀你一起使用。";
+"Receive notifications switch" = "接收通知";
+"Clear cache" = "清理缓存";
+"Language" = "语言";
+"Share app" = "分享APP";
+"You can set whether or not to accept the notice, If you close the notification, you will not be able to accept the push messages to the device alarm." = "你可以在系统设置中“通知”选项中找到“Iot-Alarm”，进入后设置是否允许APP接受推送。如果不接受推送，您将无法获取到设备的报警的信息。";
+"You can find the \Iot-Alarm\" in the system settings \"notification\" option, and then enter the settings to allow the APP to accept the push. If you do not accept push, you will not be able to get information to the device alarm." = "你可以在系统设置中“通知”选项中找到“Iot-Alarm”，进入后设置是否允许APP接受推送。如果不接受推送，您将无法获取到设备的报警的信息。";
+"FeedBack" = "用户反馈";
+"Product or APP problem feedback" = "产品或者APP问题反馈";
+"Feedback message" = "反馈信息";
+
+//历史记录
+"Arming status changes" = "布防状态更改";
+"Trigger alarm" = "触发";
+"Device disassembly alarm" = "设备防拆警告";
+"Device battery low voltage" = "设备电量不足";
+"Devcie on-line" = "设备上线";
+"Device off-line" = "设备离线";
+"Device battery returned to normal" = "设备电量恢复正常";
+"Device disassembly alarm revocation" = "设备防拆警告撤销";
+"Trigger alarm revocation" = "触发撤销";
+"History record" = "历史记录";
+"Device alarm" = "设备报警";
+"Device alarm revocation" = "设备报警撤销";
+"Alarm" = "报警";
+"Alarm delay" = "报警延时";
+
+//版本信息
+"Have any questions please contact:" = "有任何问题请咨询："; 
+"Or through the feedback page to our message." = "或者通过反馈页面给我们留言。";
+"Copyright © 2016 Shenzhen JiaDe Sensing Technology Co., Ltd. All rights reserved" = "Copyright © 2017 深圳嘉德物联科技有限责任公司  版权所有.";
+"Copyright © 2016 Shenzhen ANKA Sensing Technology Co., Ltd. All rights reserved" = "Copyright© 2016 深圳市创安佳技术科技有限公司 版权所有";
+//
+////隐私策略
+
+
+
+//反馈界面
+"Edit the feedback" = "编辑反馈";
+"Enter the feedback in the text box" = "告诉我们你在使用产品时遇到的问题";
+"Click the \"+\" to add the image" = "点击下方“+”添加图片";
+"The camera takes a picture" = "相机拍摄照片";
+"Select a photo from the album" = "从相册中选择照片";
+"Tips" = "温馨提示";
+"We need to use your mail to send information, we promise not to leak your mailbox information and to send the information encrypted. If you are using the QQ mailbox, please get your mailbox authorization code as a password to fill in the following password box." = "我们需要使用您的邮件发送信息，我们承诺不泄漏您的邮箱信息同时对发送的信息加密。如果您使用QQ邮箱，请获取您的邮箱授权码作为密码填写以下密码框中。";
+"Your E-mail" = "您的邮箱";
+"You E-mail password" = "您的邮箱密码";
+"Send failed, check the mailbox and password is correct, or replace the mailbox to send." = "发送失败，检查邮箱和密码是否正确，或者更换邮箱发送。";
+"E-mail or password error" = "邮箱或者密码错误";
+//设备类型的名字
+"Magnetometer" = "门磁开关";
+"Human body sensing" = "人体感应器";
+"Fire alarm sensor" = "烟雾传感器";
+"Marine Sensor" = "浸水传感器";
+"Gas sensing" = "气体传感器";
+"Vibration sensing" = "振动传感器";
+"UndownDevice" = "无法识别的设备";
+"Remote control" = "设备遥控器";
+"APP Client" = "APP 客户端";
+"Siren" = "警号";
+"Doorbell" = "门铃";
+"PGM" = "PGM";
+"SoS" = "紧急按钮";
+"Camera" = "摄像头";
+"Add slave device" = "添加从设备";
+"Select the slave device type" = "选择子设备类型";
+
+//子设备页面 基础页面  个性页面
+"delete device" = "删除设备";
+
+"Are you sure you want to delete the device?" = "确定要删除该设备吗?";
+"Modify the name of the subDevice" = "修改子设备名字";
+"Device Information" = "设备信息";
+"Battery status" = "电压状态";
+"online status" = "在线状态";
+"Trigger status" = "触发状态";
+"Tamper status" = "防拆状态";
+"SubDevice owner" = "中控设备";
+"Low power" = "电压不足";
+"Sufficient power" = "电压充足";
+"Sensing someone" = "检测有人";
+"Sensing on body" = "检测无人";
+"Detection of smoke" = "检测有烟雾";
+"Detection is normal" = "检测正常";
+
+"Open" = "打开";
+"Close" = "关闭";
+"Tamper trigger" = "触发防拆";
+"Tamper security" = "防拆正常";
+"Set the device name" = "设置设备的名字";
+"Subdevice type" = "子设备类型";
+"Id can not be empty" = "ID不能为空";
+"Enter the id of the PGM" = "输入PGM ID";
+"Enter the id of the siren" = "输入警号ID";
+"Must be the number and combination of the letters 'a' - 'f'" = "输入的内容必须是数字和 a-f 字母的组合";
+"Must be 6 characters" = "请输入六位字符";
+"The number entered must be between 1-65535" = "数值的大小应该在 1-65535之间";
+"PGM ID" =  "PGM ID";
+"Siren ID" = "警号 ID";
+
+//子设备设置的信息
+"Offline detection" = "离线检测";
+"Armaway effective" = "外出布防有效";
+"Armstay effective" ="在家布防有效";
+"Disarmaway effective" = "撤防时有效";
+"Alarm settings" = "报警设置";
+"The remote control unit can not change the settings" = "遥控器设备不能更改设置";
+
+//添加摄像头界面
+"CloudID:" = "云  ID:";
+"Remark:" = "备  注:";
+"Account:" = "设备账户:";
+"Password:" = "设备密码:";
+"Enter the cloud ID" = "输入设备云ID";
+"Add a remark to the device" = "添加设备备注";
+"Set an account for camera" = "设置设备账户";
+"Set a password for camera" = "设置设备密码";
+"The connection failed. Please check the correctness of the cloud ID and make sure the device is connected to the network." = "连接失败，请检查云ID的正确性，并确保设备已经连接网络。";
+"Cloud ID can not be empty" = "云ID不能为空";
+"The device already exists" = "已经存在的设备";
+"Surveillance cameras" = "监控摄像头";
+"Add the camera, you can set the camera account and password, if not set, the default is empty." = "添加摄像头时，可对摄像头设置账号和密码，如不设置，默认为空。";
+"Add a camera"  = "添加摄像头";
+"wrong password" = "密码错误";
+"Please enter a valid password" = "请输入一个有效密码";
+"Please enter the password on the bottom of the camera" = "请输入摄像头底部的密码";
+"Please enter the camera password" = "摄像头密码";
+
+//摄像头第二版
+"Access the camera" = "连接摄像头";
+"Please choose a suitable connection" = "请选择一个合适连接方式";
+"Smart connection" = "智能连接";
+"Add a LAN camera" = "添加局域网摄像头";
+"1.Turn on the power and the device enters the waiting state. \nA connection prompt sounds are also issued." = "1.接通电源，设备进入等待链接状态。\n同时会发出链接提示声音。";
+"2. Keep the phone and equipment at 30cm away" = "2.摄像头和手机保持30cm以内的距离。";
+"next step" = "下一步";
+"The device requires an online Wi-Fi" = "设备需要连接的Wi-Fi";
+"The device does not support 5G networks" = "不支持5G网络的连接";
+"Connect the process for about 1-2 minutes, please be patient" = "连接过程大约1-2分钟，请耐心等待";
+"There is no connected camera in the LAN" = "局域网中没有设备";
+"Select a camera that is not bound to bind." = "选择一个设备进行绑定。";
+"Binded" = "已绑定";
+
+"Hear the camera suggested that the connection was successful" = "已经听到摄像头提示连接成功";
+"Please enter the camera ID" = "请输入摄像头ID";
+"Please enter your password" = "请输入密码";
+"Add camera" = "添加摄像头";
+"The camera ID or password is wrong. Please try again" = "摄像头ID或者密码错误，请重新输入";
+
+
+
+//播放界面
+"Click to select or double-click to enlarge a video for control." = "* 单机选中或者双击放大视频之后，可对视频进行操作。";
+"You need to select a video to operate." = "你需要选中一个视频才能操作。";
+"This camera has no picture." = "当前的摄像机没有画面。";
+"No album access." = "没有使用相册的权限。";
+"The album name is not set." = "相册名为空。";
+"Modify remarks" = "修改备注名";
+"Please enter a remark name." = "请输入备注名称。";
+"Remarks name" = "备注名称";
+"Modify the device password" = "修改摄像头密码";
+"Please enter the camera password." = "请输入摄像头的密码";
+"Are you sure you want to delete the camera?" = "确定删除摄像头吗";
+"connecting..." = "连接中...";
+"Modify password" = "修改密码";
+"new password" = "新密码";
+"The password is 6-30 characters" = "密码为3-30位字符";
+
+//修改设备信息界面
+//修改设备信息
+"Device Accout" = "设备账号";
+"Device Password" = "设备密码";
+"Remark" = "设备备注";
+"Can not save because the content is empty" = "无法保存，因为内容为空。";
+
+//机智云的错误信息
+"email already exists!" = "E-mail已经存在";
+"phone already exists!" = "手机号已存在";
+"username or password error!" = "用户名或者密码错误";
+"form_invalid" = "邮箱格式错误";
+"send sms failed!" = "发送验证码失败";
+"code invalid" = "无效的验证码";
+"user does not exist!" = "用户名不存在";
+
+/*  公共的  */
+"Succeeded" = "成功";
+"Cancle" = "取消";
+"back" = "返回";
+"OK" = "确定";
+"Failed" = "失败";
+"accomplish" = "完成";
+"Please login iCloud first" = "请先登录iCloud";
+"Next" = "下一步";
+"Save succeed" = "保存成功";
+"Loading" = "请等待...";
+"Connect the device Wi-Fi is successful, click back to APP." = "连接设备Wi-Fi成功，点击返回APP。";
+"now" = "现在";
+
+//MJ刷新
+"MJRefreshHeaderIdleText" = "下拉可以刷新";
+"MJRefreshHeaderPullingText" = "松开立即刷新";
+"MJRefreshHeaderRefreshingText" = "正在刷新数据中...";
+
+"MJRefreshAutoFooterIdleText" = "点击或上拉加载更多";
+"MJRefreshAutoFooterRefreshingText" = "正在加载更多的数据...";
+"MJRefreshAutoFooterNoMoreDataText" = "已经全部加载完毕";
+
+"MJRefreshBackFooterIdleText" = "上拉可以加载更多";
+"MJRefreshBackFooterPullingText" = "松开立即加载更多";
+"MJRefreshBackFooterRefreshingText" = "正在加载更多的数据...";
+"MJRefreshBackFooterNoMoreDataText" = "已经全部加载完毕";
+
+"MJRefreshHeaderLastTimeText" = "最后更新：";
+"MJRefreshHeaderDateTodayText" = "今天";
+"MJRefreshHeaderNoneLastDateText" = "无记录";
+
+/*  图片的本地化  */
+"Device_getaway_disarm_EN_off" = "Device_getaway_disarm_CH_off";
+"Device_getaway_disarm_EN_on" = "Device_getaway_disarm_CH_on";
+"Device_getaway_armstay_EN_off" = "Device_getaway_armstay_CH_off";
+"Device_getaway_record_EN_on" = "Device_getaway_record_CH_on";
+"Device_getaway_record_EN_off" = "Device_getaway_record_CH_off";
+"Device_getaway_armaway_EN_off" = "Device_getaway_armaway_CH_off";
+"Device_getaway_armaway_EN_on" = "Device_getaway_armaway_CH_on";
+"Device_getaway_armstay_EN_on" = "Device_getaway_armstay_CH_on";
+"Device_getaway_setting_EN_on" = "Device_getaway_setting_CH_on";
+"Device_getaway_setting_EN_off" = "Device_getaway_setting_CH_off";
+"handleImageEN" = "handleImageCH";

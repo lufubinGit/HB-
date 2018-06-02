@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConectionWifiPage">
+            <connections>
+                <outlet property="nextButton" destination="Drt-U4-ogV" id="4Et-yJ-1D0"/>
+                <outlet property="showImageOne" destination="bRU-Ko-w1n" id="Ki5-XR-nQS"/>
+                <outlet property="showImageTwo" destination="FRn-Kj-dHg" id="ocm-EV-GmL"/>
+                <outlet property="tipOne" destination="VQF-HI-tcQ" id="Gvo-j8-4yq"/>
+                <outlet property="tipTwo" destination="Q7F-k0-VIJ" id="UZE-AQ-lua"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Drt-U4-ogV">
+                    <rect key="frame" x="93.5" y="609.5" width="187.5" height="37.5"/>
+                    <color key="backgroundColor" red="0.24501692250000001" green="0.7296927433" blue="0.39908756499999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Drt-U4-ogV" secondAttribute="height" multiplier="5:1" id="hgi-Wp-RT5"/>
+                    </constraints>
+                    <state key="normal" title="下一步">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="next:" destination="-1" eventType="touchUpInside" id="viG-8v-xOa"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQF-HI-tcQ">
+                    <rect key="frame" x="20" y="40" width="335" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="cOZ-BP-xQn"/>
+                    </constraints>
+                    <string key="text">1.接通电源，设备进入等待链接状态。
+同时会发出链接提示声音。
+</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.手机和设备保持30cm距离" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q7F-k0-VIJ">
+                    <rect key="frame" x="19" y="245" width="336" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="5cM-Vk-0ka"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bRU-Ko-w1n">
+                    <rect key="frame" x="93.5" y="110" width="187.5" height="125"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="bRU-Ko-w1n" secondAttribute="height" multiplier="340:227" id="uYP-kK-t0u"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FRn-Kj-dHg">
+                    <rect key="frame" x="94" y="295" width="187.5" height="125.5"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Q7F-k0-VIJ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="6dA-B5-NiN"/>
+                <constraint firstAttribute="trailing" secondItem="VQF-HI-tcQ" secondAttribute="trailing" constant="20" id="71Z-qF-mc9"/>
+                <constraint firstAttribute="trailing" secondItem="Q7F-k0-VIJ" secondAttribute="trailing" constant="20" id="9fC-Jd-wMa"/>
+                <constraint firstItem="VQF-HI-tcQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="Dji-N2-hjX"/>
+                <constraint firstAttribute="bottom" secondItem="Drt-U4-ogV" secondAttribute="bottom" constant="20" id="Gsa-n7-VYM"/>
+                <constraint firstItem="FRn-Kj-dHg" firstAttribute="centerX" secondItem="bRU-Ko-w1n" secondAttribute="centerX" id="KN2-9c-lhe"/>
+                <constraint firstItem="bRU-Ko-w1n" firstAttribute="top" secondItem="VQF-HI-tcQ" secondAttribute="bottom" constant="10" id="LHX-L8-gni"/>
+                <constraint firstItem="bRU-Ko-w1n" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="1:2" id="NrY-6I-qdR"/>
+                <constraint firstItem="FRn-Kj-dHg" firstAttribute="height" secondItem="bRU-Ko-w1n" secondAttribute="height" id="O1E-xi-eO4"/>
+                <constraint firstItem="bRU-Ko-w1n" firstAttribute="centerX" secondItem="VQF-HI-tcQ" secondAttribute="centerX" id="P7U-gD-UZ2"/>
+                <constraint firstItem="Drt-U4-ogV" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="1:2" id="WED-nI-Puc"/>
+                <constraint firstItem="VQF-HI-tcQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ZoY-yJ-2tB"/>
+                <constraint firstItem="Drt-U4-ogV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="b27-jk-apX"/>
+                <constraint firstItem="FRn-Kj-dHg" firstAttribute="top" secondItem="Q7F-k0-VIJ" secondAttribute="bottom" constant="10" id="lNF-mZ-Zk9"/>
+                <constraint firstItem="Q7F-k0-VIJ" firstAttribute="top" secondItem="bRU-Ko-w1n" secondAttribute="bottom" constant="10" id="roa-RP-jwO"/>
+                <constraint firstItem="FRn-Kj-dHg" firstAttribute="width" secondItem="bRU-Ko-w1n" secondAttribute="width" id="x1b-Gv-0DD"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

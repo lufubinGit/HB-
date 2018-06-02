@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="95" id="KGk-i7-Jjw" customClass="SliderTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="410" height="95"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="410" height="94"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsE-yj-8lN">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wV-du-SaH">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="500" translatesAutoresizingMaskIntoConstraints="NO" id="3X5-zH-Thy">
+                        <connections>
+                            <action selector="Aslider:" destination="KGk-i7-Jjw" eventType="valueChanged" id="bbz-cU-30T"/>
+                        </connections>
+                    </slider>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTg-Tr-QNT">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Mg4-9G-xVp"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="pTg-Tr-QNT" secondAttribute="trailing" id="0aS-L5-fye"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="7wV-du-SaH" secondAttribute="leading" id="6lN-8l-Vqf"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="pTg-Tr-QNT" secondAttribute="bottom" constant="-8" id="H4o-Bl-aZW"/>
+                    <constraint firstItem="gsE-yj-8lN" firstAttribute="centerX" secondItem="3X5-zH-Thy" secondAttribute="centerX" id="MHT-VO-Da9"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="3X5-zH-Thy" secondAttribute="trailing" constant="20" id="Mem-eu-Zcy"/>
+                    <constraint firstItem="gsE-yj-8lN" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="1:3" id="ZsS-Ny-A9t"/>
+                    <constraint firstItem="pTg-Tr-QNT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="aac-tB-viG"/>
+                    <constraint firstItem="gsE-yj-8lN" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="-15" id="cj4-bj-yN8"/>
+                    <constraint firstItem="3X5-zH-Thy" firstAttribute="height" secondItem="gsE-yj-8lN" secondAttribute="height" id="kWK-Ak-lb7"/>
+                    <constraint firstItem="7wV-du-SaH" firstAttribute="height" secondItem="gsE-yj-8lN" secondAttribute="height" id="tLE-Ka-MDa"/>
+                    <constraint firstItem="3X5-zH-Thy" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="15" id="wNK-ak-986"/>
+                    <constraint firstItem="7wV-du-SaH" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="wyQ-px-tSG"/>
+                    <constraint firstItem="3X5-zH-Thy" firstAttribute="leading" secondItem="7wV-du-SaH" secondAttribute="trailing" constant="30" id="yEu-6Y-m0g"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="Aslider" destination="3X5-zH-Thy" id="uNS-YC-pkb"/>
+                <outlet property="count" destination="gsE-yj-8lN" id="wHh-2D-RH0"/>
+                <outlet property="name" destination="7wV-du-SaH" id="ck2-HK-PwR"/>
+            </connections>
+            <point key="canvasLocation" x="2" y="127"/>
+        </tableViewCell>
+    </objects>
+</document>

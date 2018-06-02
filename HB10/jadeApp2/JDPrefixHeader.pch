@@ -1,0 +1,144 @@
+//
+//  JDPrefixHeader.pch
+//  jadeApp2
+//
+//  Created by 卢赋斌 on 16/9/5.
+//  Copyright © 2016年 JaDe Coupling sensor Technology Co., Ltd. All rights reserved.
+//
+
+#ifndef JDPrefixHeader_pch
+#define JDPrefixHeader_pch
+/********************************************   公司替换修改项目   **********************************************/
+
+//机智云的产品ID和极光推送ID
+#define XPGAppID [JDAppGlobelTool shareinstance].GizAPPId
+#define XPGAppSecret [JDAppGlobelTool shareinstance].GizAPPKey
+#define JpushAppKey  [JDAppGlobelTool shareinstance].JpushId
+#define JpushAppSecret    [JDAppGlobelTool shareinstance].JpushKey
+
+//公司Email
+#define OfficialEmail [JDAppGlobelTool shareinstance].officialEmail
+
+//待用
+#define OfficialProductUrl [JDAppGlobelTool shareinstance].officialProductUrl
+
+//公司电话号码
+#define OfficialTel  [JDAppGlobelTool shareinstance].officialTel
+
+//公司网址
+#define CompanyUrl [JDAppGlobelTool shareinstance].companyUrl
+
+//APP主色调
+#define APPMAINCOLOR  [JDAppGlobelTool shareinstance].aPPMAINCOLOR
+
+//APP导航色调
+#define APPAMAINNAVCOLOR     [JDAppGlobelTool shareinstance].aPPMAINCOLOR
+
+#define RepalceImage(imageName)   [[JDAppGlobelTool shareinstance] repalceImage:imageName]
+
+/********************************************   请求地址   **********************************************/
+#define DomesticWeatherAPI  @"http://php.weather.sina.com.cn/xml.php?city=%@&password=DJOYnieT8234jlsK&day=0"
+
+/********************************************   第三方库   **********************************************/
+
+
+/********************************************   系统颜色   **********************************************/
+#define RGBColor(R,G,B,A) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]
+#define APPBLUECOlOR  RGBColor(62,179,177,1) //
+#define APPSAFEGREENCOLOR  RGBColor(0,238,0,1)//安全绿色
+#define APPGRAYBLACKCOLOR  RGBColor(85,88,85,1)// 灰黑色
+#define APPBACKGROUNDCOLOR RGBColor(230,230,230,1)//默认的灰色背景
+#define APPLINECOLOR   [UIColor colorWithWhite:0.6 alpha:0.3]  //人工线条颜色
+
+/********************************************     通知/名词语     **********************************************/
+//通知名词
+#define GizClientcJSON   [[NSUserDefaults standardUserDefaults] objectForKey:XPGAppID]
+#define GizGetDeviceData @"gizgetDeviceData"
+#define GizBindAirLinkOK @"gizarllinkOK"
+#define GizLoginSuc @"gizLoginSucess"
+#define GizLogOutSuc @"gizLogoutSucess"
+#define ChangeUserImage @"changeuserImage"
+
+#define GizDeviceRefrsh @"GizDeviceBindSuc"
+#define GizSubDeviceRefrsh @"GizDeviceBindSuc"
+#define FoundSubDevice @"foundsubdevcie"
+#define FoundRFSubDevice @"foundRFsubdevcie"
+#define GizStopSearchSubDevcie @"gizstopsearchsubdevcie"
+
+#define FoundHistoryRecord @"foundHistoryRecord"
+#define AddSubDeviceSuc @"AddSubDeviceSuc"
+#define DeleteSubdeviceSuc @"deleteSubdeviceSuc"
+#define ModfySubdeviceSuc @"ModfySubdeviceSuc"
+#define GetDevicePhone @"getdevicephone"
+#define ModifyDeviceNumSuc @"ModifyDeviceNumSuc"
+#define GetANewArm   @"GetANewArm"
+#define GetACamer @"getNewCamer"
+
+#define RootNavSwipNot @"RootNavSwip"
+#define noticSwitch @"enableNotic"
+#define JadeUserName @"logusername"
+#define jadeUserPassword @"logpassword"
+#define RootNavMenuHiden @"HidenRootMenu"
+#define ResetNotifition  @"ResetNotifition"
+#define OtherNewUserLogin     @"OtherNewUserLogin"
+#define CamerAdrr  [NSString stringWithFormat:@"%@JDCamerAdrr",[GizSupport sharedGziSupprot].GizUserName]
+#define CameraDeviceDid(A)  [NSString stringWithFormat:@"%@Camera",A]
+
+//其他名字
+#define UserFirstUseAPP @"userFirseUseApp"
+#define appLanguage @"appLanguage"
+#define appCameraArr @"appCameraArr"
+
+/********************************************   简约代码   **********************************************/
+
+#define WIDTH [UIScreen mainScreen].bounds.size.width
+#define HIGHT [UIScreen mainScreen].bounds.size.height
+#define NavLeftButton [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 44, 35)]
+#ifdef DEBUG
+#define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#define DLog(...)
+#endif
+
+#define Local(A)   [NSString DPLocalizedString:A] //本地化语言简输
+
+#define STRINGIFY(S) #S
+#define DEFER_STRINGIFY(S) STRINGIFY(S)
+#define PRAGMA_MESSAGE(MSG) _Pragma(STRINGIFY(message(MSG)))
+#define FORMATTED_MESSAGE(MSG) "[TODO-" DEFER_STRINGIFY(__COUNTER__) "] " MSG " \n" \
+DEFER_STRINGIFY(__FILE__) " line " DEFER_STRINGIFY(__LINE__)
+#define KEYWORDIFY try {} @catch (...) {}
+// 最终使用下面的宏
+#define TODO(MSG) KEYWORDIFY PRAGMA_MESSAGE(FORMATTED_MESSAGE(MSG))
+
+//#define Local(A)   [[NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] objectForKey:appLanguage]] ofType:@"lproj"]] localizedStringForKey:(A) value:nil table:@"Localizable"] //本地化语言简输
+
+
+#define ADD_NOTIFY(X) [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(X:) name:@"" #X "" object:nil]
+#define REMOVE_NOTIFY [[NSNotificationCenter defaultCenter] removeObserver:self]
+
+#define SZSTR(x) [x UTF8String]
+#define NSSTR(x) [GUI ToNSStr:x]
+#define STRNCPY(x, y)           \
+if (x != NULL && y != NULL) \
+strncpy(x, y, sizeof(x))
+#define STRNSCPY(x, y)         \
+if (x != NULL && y != nil) \
+strncpy(x, [y UTF8String], sizeof(x))
+#define OS_IOS 1
+#define APP_WIFIName [JDAppGlobelTool shareinstance].currentWifiName
+#define APPWindow ((AppDelegate *)[UIApplication sharedApplication].delegate).window
+
+
+/********************************************   全局类/常量    **********************************************/
+
+#define PublicCornerRadius 5.0   //常规控件圆角
+#define DeleteSubDeviceSN 81
+
+#ifdef __OBJC__
+
+
+
+#endif
+
+#endif /* JDPrefixHeader_pch */

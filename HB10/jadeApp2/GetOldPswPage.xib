@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GetOldPswPage">
+            <connections>
+                <outlet property="brief" destination="Gws-gY-2fP" id="9oJ-KZ-VIo"/>
+                <outlet property="nextButton" destination="7yj-Wu-bpq" id="EAN-5I-m51"/>
+                <outlet property="oldPswTextF" destination="rna-0i-iaE" id="Zxm-0o-Ebg"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Dt-AW-TsA">
+                    <rect key="frame" x="16" y="76" width="288" height="1"/>
+                    <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="TNM-Kp-98b"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7yj-Wu-bpq">
+                    <rect key="frame" x="16" y="97" width="288" height="36"/>
+                    <color key="backgroundColor" red="0.62340156619999998" green="0.85573053170000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="7yj-Wu-bpq" secondAttribute="height" multiplier="8" id="LGG-s7-77i"/>
+                    </constraints>
+                    <state key="normal" title="下一步">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="next:" destination="-1" eventType="touchUpInside" id="LiO-Px-Adi"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入原始密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rna-0i-iaE">
+                    <rect key="frame" x="16" y="36" width="288" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="lzW-gc-aUR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Gws-gY-2fP">
+                    <rect key="frame" x="10" y="153" width="300" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="QnP-Vv-rOr"/>
+                    </constraints>
+                    <string key="text">You are modifying the password, modify the password need to line the current password authentication, after the completion of the input, click on the next step.</string>
+                    <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Gws-gY-2fP" firstAttribute="top" secondItem="7yj-Wu-bpq" secondAttribute="bottom" constant="20" id="5Q3-Ms-qJm"/>
+                <constraint firstAttribute="trailing" secondItem="Gws-gY-2fP" secondAttribute="trailing" constant="10" id="8B8-dD-D6g"/>
+                <constraint firstItem="7yj-Wu-bpq" firstAttribute="top" secondItem="0Dt-AW-TsA" secondAttribute="bottom" constant="20" id="8zs-lS-Ysd"/>
+                <constraint firstItem="rna-0i-iaE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="HSb-eT-nrY"/>
+                <constraint firstItem="rna-0i-iaE" firstAttribute="width" secondItem="7yj-Wu-bpq" secondAttribute="width" id="M7O-RU-27f"/>
+                <constraint firstItem="0Dt-AW-TsA" firstAttribute="top" secondItem="rna-0i-iaE" secondAttribute="bottom" constant="5" id="P9t-qY-wiF"/>
+                <constraint firstItem="rna-0i-iaE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="36" id="R2k-JQ-9Rj"/>
+                <constraint firstItem="7yj-Wu-bpq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Xqf-sl-lcy"/>
+                <constraint firstItem="0Dt-AW-TsA" firstAttribute="leading" secondItem="rna-0i-iaE" secondAttribute="leading" id="euH-ju-8qR"/>
+                <constraint firstItem="7yj-Wu-bpq" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.9" id="l8V-Dc-Fv9"/>
+                <constraint firstItem="Gws-gY-2fP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="uie-6D-vOg"/>
+                <constraint firstItem="0Dt-AW-TsA" firstAttribute="trailing" secondItem="rna-0i-iaE" secondAttribute="trailing" id="z8p-G6-HIw"/>
+            </constraints>
+            <point key="canvasLocation" x="-191" y="102"/>
+        </view>
+    </objects>
+</document>

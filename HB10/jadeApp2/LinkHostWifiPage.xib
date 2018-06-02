@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LinkHostWifiPage">
+            <connections>
+                <outlet property="WIFIImage" destination="rIz-82-lqE" id="fX4-4u-3bq"/>
+                <outlet property="WifiName" destination="exF-bF-sLO" id="7AZ-Wt-5PV"/>
+                <outlet property="WifiPassTextfiled" destination="P05-3V-PFw" id="Oxq-ju-KeA"/>
+                <outlet property="berif" destination="GET-Uy-iIC" id="w9Q-Xo-2Gd"/>
+                <outlet property="startAdd" destination="Ca2-Rq-QyI" id="YT3-7L-fMk"/>
+                <outlet property="topTip" destination="xJZ-wr-gih" id="WQs-Pr-6we"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="为设备配置网关／主机网络：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJZ-wr-gih">
+                    <rect key="frame" x="15" y="15" width="225.5" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7NQ-sX-n2o">
+                    <rect key="frame" x="305" y="110.5" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="7NQ-sX-n2o" secondAttribute="height" id="STv-jf-FQq"/>
+                        <constraint firstAttribute="height" constant="40" id="bfk-kr-yoz"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1E-Re-DWm">
+                    <rect key="frame" x="20" y="150.5" width="325" height="1"/>
+                    <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="SC0-7I-G1X"/>
+                    </constraints>
+                </view>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入Wi-Fi密码：" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P05-3V-PFw">
+                    <rect key="frame" x="20" y="115.5" width="275" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="R8X-fs-uZ0"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请添加前保证网关／主机已经恢复出厂设置（绿灯快闪），如果网关／主机已经连接到网络，请保证手机和网关在同一个WIfi下。如果网关／主机未连接到网络又未恢复出厂设置，请查看说明书如何操作。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GET-Uy-iIC">
+                    <rect key="frame" x="30" y="249" width="315" height="84"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8P-Xh-Qyp">
+                    <rect key="frame" x="68" y="-84" width="0.0" height="0.0"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1ex-J0-5nS">
+                    <rect key="frame" x="30" y="363" width="315" height="254"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ca2-Rq-QyI">
+                    <rect key="frame" x="131.5" y="181.5" width="112.5" height="37.5"/>
+                    <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Ca2-Rq-QyI" secondAttribute="height" multiplier="3" id="dRk-hW-gco"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="开始添加">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wi-Fi名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exF-bF-sLO">
+                    <rect key="frame" x="10" y="58" width="223.5" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rIz-82-lqE">
+                    <rect key="frame" x="243.5" y="52.5" width="48" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="rIz-82-lqE" secondAttribute="height" multiplier="6:5" id="eeU-3u-rFE"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Ca2-Rq-QyI" firstAttribute="top" secondItem="s1E-Re-DWm" secondAttribute="bottom" constant="30" id="3tH-VM-gzm"/>
+                <constraint firstItem="GET-Uy-iIC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="4Ln-Z4-2I7"/>
+                <constraint firstItem="rIz-82-lqE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="80" id="4sM-kM-cFo"/>
+                <constraint firstItem="Ca2-Rq-QyI" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="79s-nq-E7y"/>
+                <constraint firstItem="1ex-J0-5nS" firstAttribute="top" secondItem="GET-Uy-iIC" secondAttribute="bottom" constant="30" id="Apq-Rj-E42"/>
+                <constraint firstItem="P05-3V-PFw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="As3-im-zei"/>
+                <constraint firstItem="7NQ-sX-n2o" firstAttribute="centerY" secondItem="P05-3V-PFw" secondAttribute="centerY" id="Bq3-8P-dWI"/>
+                <constraint firstItem="7NQ-sX-n2o" firstAttribute="leading" secondItem="P05-3V-PFw" secondAttribute="trailing" constant="10" id="DZa-Kg-okF"/>
+                <constraint firstAttribute="trailing" secondItem="7NQ-sX-n2o" secondAttribute="trailing" constant="30" id="JJI-Zd-pbO"/>
+                <constraint firstItem="exF-bF-sLO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="K2R-Bi-YGQ"/>
+                <constraint firstAttribute="bottom" secondItem="1ex-J0-5nS" secondAttribute="bottom" constant="50" id="KEc-0u-lUb"/>
+                <constraint firstItem="rIz-82-lqE" firstAttribute="top" secondItem="xJZ-wr-gih" secondAttribute="bottom" constant="17" id="Oeq-S0-Tyb"/>
+                <constraint firstItem="s1E-Re-DWm" firstAttribute="leading" secondItem="P05-3V-PFw" secondAttribute="leading" id="Oz0-LV-LiZ"/>
+                <constraint firstItem="exF-bF-sLO" firstAttribute="centerY" secondItem="rIz-82-lqE" secondAttribute="centerY" id="TIk-Cj-j8r"/>
+                <constraint firstItem="P05-3V-PFw" firstAttribute="top" secondItem="xJZ-wr-gih" secondAttribute="bottom" constant="80" id="Y7V-2z-EkZ"/>
+                <constraint firstItem="GET-Uy-iIC" firstAttribute="top" secondItem="Ca2-Rq-QyI" secondAttribute="bottom" constant="30" id="biz-Br-Xhe"/>
+                <constraint firstItem="s1E-Re-DWm" firstAttribute="top" secondItem="P05-3V-PFw" secondAttribute="bottom" constant="5" id="bpH-Gc-75f"/>
+                <constraint firstItem="1ex-J0-5nS" firstAttribute="leading" secondItem="GET-Uy-iIC" secondAttribute="leading" id="bvI-MS-TZ9"/>
+                <constraint firstItem="s1E-Re-DWm" firstAttribute="trailing" secondItem="7NQ-sX-n2o" secondAttribute="trailing" id="fKQ-2J-L18"/>
+                <constraint firstItem="rIz-82-lqE" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="48:667" id="fVD-Gq-RYh"/>
+                <constraint firstAttribute="trailing" secondItem="GET-Uy-iIC" secondAttribute="trailing" constant="30" id="fqR-Va-IWB"/>
+                <constraint firstItem="xJZ-wr-gih" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="15" id="gWi-mQ-hKf"/>
+                <constraint firstItem="xJZ-wr-gih" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="mbB-EW-mJf"/>
+                <constraint firstItem="Ca2-Rq-QyI" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.3" id="n2f-f2-Rcz"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xJZ-wr-gih" secondAttribute="trailing" constant="10" id="pc3-qu-Jje"/>
+                <constraint firstItem="rIz-82-lqE" firstAttribute="leading" secondItem="exF-bF-sLO" secondAttribute="trailing" constant="10" id="vsy-1t-6Yu"/>
+                <constraint firstItem="1ex-J0-5nS" firstAttribute="trailing" secondItem="GET-Uy-iIC" secondAttribute="trailing" id="z2S-1T-Jxf"/>
+            </constraints>
+            <point key="canvasLocation" x="-70" y="116"/>
+        </view>
+    </objects>
+</document>
