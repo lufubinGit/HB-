@@ -68,13 +68,14 @@
 
 //网关 的设备类型
 - (GateawayType)type{
-    
     if ([self.gizDevice.productKey isEqualToString:@"6931177c6802488787e4af52581730b3"]){
         return GateawayType433868;
     }else if([self.gizDevice.productKey isEqualToString:@"58aa9e10ae2d4d788507226d718cb8d1"]){
         return GateawayTypeDeafult;
     }else if([self.gizDevice.productKey isEqualToString:@"a072d3ba727a46c7a00f31f1a8e14cc0"]){
         return GateawayTypeWGZ;
+    }else if([self.gizDevice.productKey isEqualToString:XPGAppDetectorProductKey]){
+        return GateawayTypeDerector;
     }else{
         return GateawayTypeDeafult;
     }
@@ -150,7 +151,6 @@
         self.SignalIntensity = GSMSi;
         return;
     }
-    
     NSInteger single = [self.gizDeviceData[@"gsm_csq"] integerValue];
     self.gsm_sim_check = [self.gizDeviceData[@"gsm_sim_check"] boolValue];
     self.gsm_search_network = [self.gizDeviceData[@"gsm_search_network"] boolValue];

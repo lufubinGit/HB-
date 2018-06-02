@@ -165,12 +165,14 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
         [[GizSupport sharedGziSupprot] gizFindDeviceSucceed:^{
+            [self refresh];
+            [self stopRefrsh];
         } failed:^(NSString *) {
         }];
         for (DeviceInfoModel *model in self.onlineArr) {
             [[GizSupport sharedGziSupprot] gizGetDeviceStatesWithSN:90 device:model callBack:^(NSDictionary * datamap) {
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    [self.talbeView reloadData];
+                    [self refresh];
                     [self stopRefrsh];
                 });
             }];
@@ -183,8 +185,6 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refresh) name:GizDeviceRefrsh object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(initData) name:GizLoginSuc object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(initData) name:GizLogOutSuc object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refresh) name:GetANewArm object:nil];
 }
     
     //添加水印
@@ -263,7 +263,6 @@
     
     EquipmentSectionView *GWView = [[EquipmentSectionView alloc]initWithFrame:CGRectMake(0, 8, WIDTH, SectionViewHei)device:device tableView:tableView];
     [GWView.deleteButton addTarget:self action:@selector(deleteleView:) forControlEvents:UIControlEventTouchUpInside];
-    [GWView refrshDataWithModel:device];
     return GWView;
 }
     
@@ -304,11 +303,8 @@
     //添加右上角 进入添加设备的按钮
 - (void)addDeviceButton{
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(chooseLinkStyle)];
-    
 }
-    
-    
-    
+
 #pragma mark evevnts
     
     //语言本地化内容
@@ -316,7 +312,7 @@
     self.navigationItem.title = AlertTitle;
     [self.leftLineButton setTitle:Local(@"Online") forState:UIControlStateNormal];
     [self.rightLineButton setTitle:Local(@"Offline") forState:UIControlStateNormal];
-    [self.talbeView reloadData];
+    [self refresh];
     [_head setTitle:Local(@"MJRefreshHeaderIdleText") forState:MJRefreshStateIdle];
     [_head setTitle:Local(@"MJRefreshHeaderPullingText") forState:MJRefreshStatePulling];
     [_head setTitle:Local(@"MJRefreshHeaderRefreshingText") forState:MJRefreshStateRefreshing];
@@ -602,13 +598,6 @@
         NSLog(@"探测器主机个数： %ld",derectorCount);
         if (self.onlineSectionView.count > currentSection){
             cell = self.onlineSectionView[currentSection];
-            if(currentSection < self.onlineDerectorArr.count){
-                [cell refrshDataWithModel: self.onlineDerectorArr[currentSection]];
-
-            }else{
-                [cell refrshDataWithModel: self.onlineArr[currentSection - derectorCount]];
-            }
-            
         }else{
             if(currentSection < self.onlineDerectorArr.count){
                 cell = [self creatGetwayViewForDevice:self.onlineDerectorArr[currentSection] inTableView:self.talbeView];
@@ -619,15 +608,18 @@
             cell.tag = currentSection;
             [self.onlineSectionView addObject:cell];
         }
+        
+        if(currentSection < self.onlineDerectorArr.count){
+            [cell refrshDataWithModel: _onlineDerectorArr[currentSection]];
+        }else{
+            [cell refrshDataWithModel: _onlineArr[currentSection - derectorCount]];
+        }
+        
     }else{
         NSInteger derectorCount = self.offLineDerectorArr.count;
         if (self.offlineSectionView.count > currentSection){
             cell = self.offlineSectionView[currentSection];
-            if(currentSection < self.offLineDerectorArr.count){
-                [cell refrshDataWithModel: self.offLineDerectorArr[currentSection]];
-            }else{
-                [cell refrshDataWithModel: self.offLineArr[currentSection - derectorCount]];
-            }
+            
         }else{
             if(currentSection < self.offLineDerectorArr.count){
                 cell = [self creatGetwayViewForDevice:self.offLineDerectorArr[currentSection] inTableView:self.rightTableView];
@@ -638,6 +630,15 @@
             cell.tag = currentSection;
             [self.offlineSectionView addObject:cell];
         }
+        if(currentSection < self.offLineDerectorArr.count){
+            [cell refrshDataWithModel: _offLineDerectorArr[currentSection]];
+        }else{
+            [cell refrshDataWithModel: _offLineArr[currentSection - derectorCount]];
+        }
+    }
+    
+    if(!cell){
+        NSLog(@"空Cell");
     }
     return cell;
 }
@@ -664,9 +665,6 @@
             [sectionView refrshDataWithModel:self.offLineArr[sectionView.tag]];
         }
     }else{
-        [self.onlineSectionView removeAllObjects];
-        [self.offlineSectionView removeAllObjects];
-        
         [self refrshTableView];
     }
 }
@@ -808,7 +806,7 @@
 
     //是否显示 没有设备的标示
 - (void)showNoOnlinDevcie{
-    DLog(@"%lu",(unsigned long)_onlineArr.count);
+    DLog(@"在线主机%lu",(unsigned long)_onlineArr.count);
     dispatch_async(dispatch_get_main_queue(), ^{
         self.noOnlineDevcieView.hidden = _onlineArr.count + _onlineDerectorArr.count;
     });
@@ -844,7 +842,6 @@
 }
     
 - (NSMutableArray *)onlineArr{
-    
     _onlineArr = [[NSMutableArray alloc]init];
     for (DeviceInfoModel *device in self.sectionDeviceArr) {
         //没有绑定的的就不显示了
@@ -862,6 +859,14 @@
         }
     }
     [self showNoOnlinDevcie];
+    
+    _onlineArr = [_onlineArr sortedArrayUsingComparator:^NSComparisonResult(DeviceInfoModel *  _Nonnull obj1, DeviceInfoModel *  _Nonnull obj2) {
+        if(obj1.gizDevice.did > obj2.gizDevice.did)
+        {
+            return NSOrderedDescending;
+        }
+        return NSOrderedAscending;
+    }];
     
     return  _onlineArr;
 }
@@ -883,6 +888,7 @@
         }
     }//
     [self showNoOfflinDevcie];
+    
     return  _offLineArr;
 }
 
@@ -969,6 +975,7 @@
     
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+    
     NSLog(@"内存溢出");
 }
     

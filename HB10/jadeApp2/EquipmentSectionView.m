@@ -192,11 +192,18 @@
             make.height.equalTo(self.setbutton.mas_height);
 
         }];
-        [self addEidtButtonAtScreenFooter];
         
         UIView *bottomView = [[UIView alloc] init];
-        bottomView.frame = CGRectMake(0, SectionViewHei + BottomeButtonhei, WIDTH, 20);
         bottomView.backgroundColor = APPBACKGROUNDCOLOR ;
+        
+        if ([self.devcieModel.gizDevice.productKey isEqualToString:XPGAppDetectorProductKey]){
+            bottomView.frame = CGRectMake(0, SectionViewHei, WIDTH, 20);
+            
+        }else{
+            [self addEidtButtonAtScreenFooter];
+            bottomView.frame = CGRectMake(0, SectionViewHei + BottomeButtonhei, WIDTH, 20);
+        }
+        
         [self addSubview:bottomView];
         
     }else{  //对于离线设备
@@ -466,6 +473,7 @@
 
 - (void)refrshDataWithModel:(DeviceInfoModel *)model{
 
+    [[NSLock alloc] lock];
     NSString *stateStr = nil;
 //    NSLog(@"%@",self.devcieModel.gizDeviceData);
     [self.setbutton setTitle:Local(@"setting") forState:UIControlStateNormal];
@@ -507,6 +515,17 @@
     self.GSMSignalImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"JDDevice_GSMSigan_%ld",(long)self.devcieModel.SignalIntensity]];
     self.signalImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"JDDevice_WIFISIngn_%ld",(long)self.devcieModel.WIFISigna]];
     
+    if([self.devcieModel.gizDevice.productKey isEqualToString:XPGAppDetectorProductKey]){
+        self.GSMSignalImage.hidden = YES;
+        self.briefLabel.hidden = YES;
+        self.stateLabel.text = srnon?Local(@"Alarm"):Local(@"Nomal");
+        
+    }else{
+        self.GSMSignalImage.hidden = NO;
+        self.briefLabel.hidden = NO;
+    }
+    [[NSLock alloc] unlock];
+
 }
 
 - (void)twinkle{
