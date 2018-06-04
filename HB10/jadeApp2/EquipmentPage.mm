@@ -289,8 +289,7 @@
     textLabel.text = text;
     return view;
 }
-    
-    
+
     //添加左上角 显示菜单的按钮
 - (void)addMenuButton{
     _showMenuBUtton = NavLeftButton;
@@ -299,8 +298,7 @@
     [_showMenuBUtton addTarget:self action:@selector(showMenu) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:_showMenuBUtton];
 }
-    
-    
+
     //添加右上角 进入添加设备的按钮
 - (void)addDeviceButton{
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(chooseLinkStyle)];
@@ -603,6 +601,7 @@
         if (self.onlineSectionView.count > currentSection){
             cell = self.onlineSectionView[currentSection];
             if(currentSection < self.onlineDerectorArr.count){
+                
                 [cell refrshDataWithModel: self.onlineDerectorArr[currentSection]];
 
             }else{
@@ -646,9 +645,13 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if(tableView == self.talbeView){
-        SubDeviceShowPage *subpage = [[SubDeviceShowPage alloc]init];
-        subpage.model = self.onlineArr[indexPath.section];
-        [self.navigationController pushViewController:subpage animated:YES];
+        if(self.onlineDerectorArr.count > indexPath.section){
+            
+        }else{
+            SubDeviceShowPage *subpage = [[SubDeviceShowPage alloc]init];
+            subpage.model = self.onlineArr[indexPath.section];
+            [self.navigationController pushViewController:subpage animated:YES];
+        }
     }
 }
     
