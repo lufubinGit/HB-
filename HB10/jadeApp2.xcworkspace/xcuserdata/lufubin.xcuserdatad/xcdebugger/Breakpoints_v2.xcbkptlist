@@ -113,68 +113,6 @@
             endingLineNumber = "107"
             landmarkName = "-login:"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__23-[UserLoginPage login:]_block_invoke_2"
-                  moduleName = "jadeApp2"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lufubin/Documents/JaDe/2016.9.5%20jade2/jadeApp2/jadeApp2/UserLoginPage.mm"
-                  timestampString = "495462283.584492"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "107"
-                  endingLineNumber = "107"
-                  offsetFromSymbolStart = "236">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__copy_helper_block_"
-                  moduleName = "jadeApp2"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lufubin/Documents/JaDe/2016.9.5%20jade2/jadeApp2/jadeApp2/UserLoginPage.mm"
-                  timestampString = "495462283.584641"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "107"
-                  endingLineNumber = "107"
-                  offsetFromSymbolStart = "64">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_"
-                  moduleName = "jadeApp2"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lufubin/Documents/JaDe/2016.9.5%20jade2/jadeApp2/jadeApp2/UserLoginPage.mm"
-                  timestampString = "495462283.584766"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "107"
-                  endingLineNumber = "107"
-                  offsetFromSymbolStart = "36">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__23-[UserLoginPage login:]_block_invoke.101"
-                  moduleName = "jadeApp2"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lufubin/Documents/JaDe/2016.9.5%20jade2/jadeApp2/jadeApp2/UserLoginPage.mm"
-                  timestampString = "495462283.584886"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "108"
-                  endingLineNumber = "108"
-                  offsetFromSymbolStart = "44">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -253,8 +191,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "82"
             endingLineNumber = "82"
-            landmarkName = "-application:didReceiveRemoteNotification:fetchCompletionHandler:"
-            landmarkType = "5">
+            landmarkName = "-application:didFinishLaunchingWithOptions:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -269,8 +207,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "84"
             endingLineNumber = "84"
-            landmarkName = "-application:didReceiveRemoteNotification:fetchCompletionHandler:"
-            landmarkType = "5">
+            landmarkName = "-application:didFinishLaunchingWithOptions:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -301,8 +239,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "77"
             endingLineNumber = "77"
-            landmarkName = "-application:didReceiveRemoteNotification:"
-            landmarkType = "5">
+            landmarkName = "-application:didFinishLaunchingWithOptions:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -333,8 +271,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "65"
             endingLineNumber = "65"
-            landmarkName = "-application:didRegisterForRemoteNotificationsWithDeviceToken:"
-            landmarkType = "5">
+            landmarkName = "AppDelegate"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -783,6 +721,22 @@
             endingLineNumber = "105"
             landmarkName = "-searchDevice"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "jadeApp2/EquipmentPage.mm"
+            timestampString = "549648297.133976"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "595"
+            endingLineNumber = "595"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

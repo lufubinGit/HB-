@@ -243,6 +243,7 @@
 "Device alarm" = "设备报警";
 "Device alarm revocation" = "设备报警撤销";
 "Alarm" = "报警";
+"Nomal" = "正常";
 "Alarm delay" = "报警延时";
 
 //版本信息
