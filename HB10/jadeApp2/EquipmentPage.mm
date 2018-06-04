@@ -665,6 +665,8 @@
             [sectionView refrshDataWithModel:self.offLineArr[sectionView.tag]];
         }
     }else{
+        
+        
         [self refrshTableView];
     }
 }
