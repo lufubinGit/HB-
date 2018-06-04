@@ -59,16 +59,65 @@
 }
 
 - (NSString *)gizDeviceName{
-
     if(self.gizDevice.alias.length){
         return self.gizDevice.alias;
     }
     return _gizDeviceName;
 }
 
+//0.门磁 1.被动红外 2.烟雾 3.燃气 4.水浸 5.紧急按钮 6.振动 7.玻璃破碎 8.电子围栏 9.红外对射
+- (UIImage *)deviceIcon{
+    if(self.type == GateawayTypeDerector){
+        NSString *iamgeName = @"";
+//        return [UIImage imageNamed:[NSString stringWithFormat:@"DerectorTypeImage%ld",self.derectorType]];
+
+        switch (self.derectorType) {
+            case None:
+                break;
+            case MGT:
+                break;
+            case SMK:
+
+                break;
+            case PRO:
+
+                break;
+            case GAS:
+
+                break;
+            case WAT:
+
+                break;
+            case SOS:
+
+                break;
+            case VTT:
+
+                break;
+            case BTT:
+
+                break;
+            case ECW:
+
+                break;
+            case PRO_S:
+
+                break;
+            default:
+                break;
+        }
+
+        return [UIImage imageNamed:iamgeName];
+    }
+    else{
+        return RepalceImage(@"Device_getaway_online");
+    }
+}
+
+
+
 //网关 的设备类型
 - (GateawayType)type{
-    
     if ([self.gizDevice.productKey isEqualToString:@"6931177c6802488787e4af52581730b3"]){
         return GateawayType433868;
     }else if([self.gizDevice.productKey isEqualToString:@"58aa9e10ae2d4d788507226d718cb8d1"]){

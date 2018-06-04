@@ -136,6 +136,9 @@
 "Set Gateway Name" = "设置网关名";
 "Please enter a new name for the device" = "请设置一个名字";
 
+"Set derector Name" = "设置探测器名字";
+"Rename the detector and set the name that is not needed to distinguish the different detectors. " = "给探测器重命名，设置不用的名称以辨别不同的探测器。";
+
 
 //添加设备时提示用户按设备
 "Press and hold the device reset button until the device prompt is flashing, and then click Next to start connecting to Wi-Fi." = "请连续单按5下设备重置按钮，然后长按直至设备提示灯变成快闪状态，再点击“下一步”开始连接Wi-Fi";

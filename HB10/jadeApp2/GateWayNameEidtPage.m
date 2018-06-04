@@ -51,40 +51,24 @@
 }
 
 - (IBAction)save:(id)sender {
-    
-    
     if(self.nameText.text.length > 0){
         [SVProgressHUD showWithStatus:Local(@"Loading")];
         [[GizSupport sharedGziSupprot] gizModifyDeviceNameWithDevice:self.centerDevice name:self.nameText.text Succeed:^{
-            
             [SVProgressHUD showSuccessWithStatus:Local(@"accomplish")];
             [self.navigationController popViewControllerAnimated:YES];
             
         //这里可能还需要刷新下前面的界面才行
-//            self.
-
         } failed:^(NSString *err){
             [SVProgressHUD showErrorWithStatus:Local(@"Failed")];
-
         }];
-        
     }
     else{
-    
         [SVProgressHUD showInfoWithStatus:Local(@"Please enter a new name for the device")];
         [self.nameText becomeFirstResponder];
     }
     
     
 }
-
-
-
-
-
-
-
-
 
 /*
 #pragma mark - Navigation

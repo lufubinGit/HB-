@@ -8,8 +8,6 @@
 
 #import "DeviceInfoModel+DerectorDevice.h"
 
-
-
 typedef BOOL(^Filter)(DataPointModel*);
 @implementation DeviceInfoModel (DerectorDevice)
 
@@ -33,46 +31,50 @@ typedef BOOL(^Filter)(DataPointModel*);
 
 // 触发状态
 - (BOOL)trig{
-    return [self modelValueWithKey:@"trig"];
+    return [[self modelValueWithKey:@"trig"] boolValue];
 }
 
 - (BOOL)antiTamper{
-    return [self modelValueWithKey:@"antiTamper"];
+    return [[self modelValueWithKey:@"antiTamper"] boolValue];
 
 }
 
 - (BOOL)lowBat{
-    return [self modelValueWithKey:@"lowBat"];
+    return [[self modelValueWithKey:@"lowBat"] boolValue];
 
 }
 
 - (BOOL)alarm{
-    return [self modelValueWithKey:@"alarm"];
+    return [[self modelValueWithKey:@"alarm"] boolValue];
 
-}
-
-- (DerectorType)devType{
-    return [self modelValueWithKey:@"devType"];
 }
 
 - (BOOL)arm{
-    return [self modelValueWithKey:@"arm"];
+    return [[self modelValueWithKey:@"arm"] boolValue];
 
 }
 
 - (BOOL)fault{
-    return [self modelValueWithKey:@"fault"];
+    return [[self modelValueWithKey:@"fault"] boolValue];
 
 }
 
 - (GateawayDeviceWifiSingn)rssi{
     return  self.WIFISigna;
-
 }
 
-- (BOOL)isDerectorDevice{
-    return  [self.gizDevice.productKey isEqualToString:@"6931177c6802488787e4af52581730b3"];
-}
 
+- (DerectorType)derectorType{
+    DerectorType devType = None;
+    id num = self.gizDeviceData[@"devType"];
+    if([num isKindOfClass:[NSString class]]){
+        devType = [num integerValue];
+    }else if([num isKindOfClass:[NSNumber class]]){
+        devType = [num integerValue];
+    }else{
+        devType = (NSInteger)num;
+    }
+    return devType;
+}
 
 @end

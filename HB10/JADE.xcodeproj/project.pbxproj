@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57B22C9920C5134B00883F1C /* DerectorDetailPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B22C9820C5134B00883F1C /* DerectorDetailPage.m */; };
+		57B22C9C20C51FCA00883F1C /* EidtDerectorNamePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B22C9B20C51FCA00883F1C /* EidtDerectorNamePage.m */; };
 		6F0288A31D8F72B7000E0AFE /* RecordTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0288A11D8F72B7000E0AFE /* RecordTableViewCell.m */; };
 		6F0288A41D8F72B7000E0AFE /* RecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F0288A21D8F72B7000E0AFE /* RecordTableViewCell.xib */; };
 		6F130B9C1F506C39002648C8 /* GWNet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F130B9B1F506C39002648C8 /* GWNet.a */; };
@@ -605,6 +607,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		57B22C9720C5134B00883F1C /* DerectorDetailPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DerectorDetailPage.h; sourceTree = "<group>"; };
+		57B22C9820C5134B00883F1C /* DerectorDetailPage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DerectorDetailPage.m; sourceTree = "<group>"; };
+		57B22C9A20C51FCA00883F1C /* EidtDerectorNamePage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EidtDerectorNamePage.h; sourceTree = "<group>"; };
+		57B22C9B20C51FCA00883F1C /* EidtDerectorNamePage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EidtDerectorNamePage.m; sourceTree = "<group>"; };
 		6F0288A01D8F72B7000E0AFE /* RecordTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordTableViewCell.h; sourceTree = "<group>"; };
 		6F0288A11D8F72B7000E0AFE /* RecordTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordTableViewCell.m; sourceTree = "<group>"; };
 		6F0288A21D8F72B7000E0AFE /* RecordTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordTableViewCell.xib; sourceTree = "<group>"; };
@@ -1520,6 +1526,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		57B22C9620C5131A00883F1C /* Derector Detail Page */ = {
+			isa = PBXGroup;
+			children = (
+				57B22C9720C5134B00883F1C /* DerectorDetailPage.h */,
+				57B22C9820C5134B00883F1C /* DerectorDetailPage.m */,
+				57B22C9A20C51FCA00883F1C /* EidtDerectorNamePage.h */,
+				57B22C9B20C51FCA00883F1C /* EidtDerectorNamePage.m */,
+			);
+			name = "Derector Detail Page";
+			sourceTree = "<group>";
+		};
 		6F0288AE1D8F817C000E0AFE /* my views */ = {
 			isa = PBXGroup;
 			children = (
@@ -1903,6 +1920,7 @@
 		6F8C154D1DBCC9D5002E24ED /* gateway setting */ = {
 			isa = PBXGroup;
 			children = (
+				57B22C9620C5131A00883F1C /* Derector Detail Page */,
 				6F94ED511E517E9E001F069D /* addDevicePhoneNum */,
 				6F7B68F31DD9AB340000511D /* cell */,
 				6F8C154E1DBCCA31002E24ED /* SetGatewayPage.h */,
@@ -3519,6 +3537,7 @@
 				6F5A71C91DEFFF2E00054497 /* MJRefreshAutoGifFooter.m in Sources */,
 				6FCF033F1DB7594F002847DC /* DeviceRecordPage.m in Sources */,
 				6F308B8E1DD17B82006EF180 /* SHowSubDeviceCell.m in Sources */,
+				57B22C9C20C51FCA00883F1C /* EidtDerectorNamePage.m in Sources */,
 				6F740A991DF7E8DC0024B7E7 /* UserRegaestEmailpageViewController.m in Sources */,
 				6F5A71D11DEFFF2E00054497 /* MJRefreshStateHeader.m in Sources */,
 				6F5A71CD1DEFFF2E00054497 /* MJRefreshBackNormalFooter.m in Sources */,
@@ -3569,6 +3588,7 @@
 				6F8C15511DBCCA31002E24ED /* SetGatewayPage.m in Sources */,
 				6F9157321DFE439600F5E3FB /* FeedBackViewController.m in Sources */,
 				6F8F735E1E011CAA00072B7B /* SubdevicEidtNamePage.m in Sources */,
+				57B22C9920C5134B00883F1C /* DerectorDetailPage.m in Sources */,
 				6F2FA8A11EBAEF3000B40B78 /* EBMuteDetector.m in Sources */,
 				6F83EBEE1EE12D6F00E77917 /* LANCameraListCell.m in Sources */,
 				D40F54541D7E6F6100601173 /* EquipmentPage.mm in Sources */,

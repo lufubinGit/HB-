@@ -37,6 +37,7 @@
 #import "AddCameraOrOtherPage.h"
 #import "VideoPlayPage.h"
 #import "SubDeviceShowPage.h"
+#import "DerectorDetailPage.h"
 
 #define SectionViewHei 90
 #define BottomeButtonhei 60
@@ -646,7 +647,8 @@
     
     if(tableView == self.talbeView){
         if(self.onlineDerectorArr.count > indexPath.section){
-            
+            DerectorDetailPage *page = [[DerectorDetailPage alloc] initWithDevcie:self.onlineDerectorArr[indexPath.section]];
+            [self.navigationController pushViewController:page  animated:YES];
         }else{
             SubDeviceShowPage *subpage = [[SubDeviceShowPage alloc]init];
             subpage.model = self.onlineArr[indexPath.section];

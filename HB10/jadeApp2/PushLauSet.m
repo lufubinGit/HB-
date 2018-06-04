@@ -22,17 +22,15 @@
 @implementation PushLauSet
 {
     UIButton *_lastButton;
-
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.tips.text = Local(@"Choose push language");
     [self initUI];
 }
 
 - (void)initUI{
-    
     [self.CH setTitleColor:APPBLUECOlOR forState:UIControlStateSelected];
     [self.EN setTitleColor:APPBLUECOlOR forState:UIControlStateSelected];
     [self.RU setTitleColor:APPBLUECOlOR forState:UIControlStateSelected];
@@ -40,7 +38,6 @@
     self.EN.tintColor = [UIColor whiteColor];
     self.RU.tintColor = [UIColor whiteColor];
     if (self.currentDevice.lau == CH){
-        
         self.CH.selected = YES;
         _lastButton = self.CH;
     }else if(self.currentDevice.lau == RU){
@@ -56,8 +53,8 @@
 
 - (IBAction)CHClick:(id)sender {
     [self action:self.CH type:CH];
-  
 }
+
 - (IBAction)RUClick:(id)sender {
     [self action:self.RU type:RU];
 }
@@ -67,11 +64,9 @@
 }
 
 - (void)action:(UIButton*) btn type:(DeviceLauType)type{
-    
     NSString* flag = (type==CH)?@"0":@"1";
      [SVProgressHUD showWithStatus:Local(@"Loading")];
     NSDictionary *request = @{@"system_language":flag};
-    
     for ( DeviceInfoModel *device in [[GizSupport sharedGziSupprot] deviceList]) {
         if([device.gizDevice.did isEqualToString:self.currentDevice.gizDevice.did]){
             [[GizSupport sharedGziSupprot] gizSendOrderWithSN:41 device:device withOrder:request callBack:^(NSDictionary *datamap) {
@@ -81,16 +76,12 @@
                 if (_lastButton == btn){
                     return;
                 }
-                
                 _lastButton.selected = NO;
                 btn.selected = YES;
                 _lastButton = btn;
             }];
-
         }
     }
-    
-   
 }
 
 

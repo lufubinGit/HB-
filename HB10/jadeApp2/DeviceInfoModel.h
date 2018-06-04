@@ -137,6 +137,9 @@ typedef void(^armBlock)(void);
 //网关设备的类型  可能是不同网关  也可能是摄像头 也可能是探测器设备
 @property (nonatomic,assign) GateawayType type;
 
+//详细的探测器类型
+@property (nonatomic,assign) DerectorType derectorType;
+
 //推送语言是否可以设置
 @property (nonatomic,assign) BOOL setLauEnable;
 
@@ -163,6 +166,9 @@ typedef void(^armBlock)(void);
 
 //保存所有的设备的ID， 这个ID是一个集合 表示内包含了几个摄像头。
 @property (nonatomic,copy) NSMutableArray <NSString*> * cameraIDs;
+
+// 获取不同类型的设备的图片
+- (UIImage *)deviceIcon;
 
 
 - (void)getData:(NSDictionary *)dic;

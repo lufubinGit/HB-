@@ -129,7 +129,6 @@
     [regiestButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [regiestButton addTarget:self action:@selector(regiest) forControlEvents:UIControlEventTouchUpInside];
     if(self.subDevice.subDeviceType == PGMType||self.subDevice.subDeviceType == AlarmType){
-        
         if([self.currentDevice.gizDevice.productKey isEqualToString:@"6931177c6802488787e4af52581730b3"]){
             regiestButton.hidden = NO;
         }else{
@@ -169,6 +168,8 @@
     headView.userInteractionEnabled = YES;
     UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 20, WIDTH-20, 20)];
     titleLabel.text = Local(@"Modify the name of the subDevice");
+   
+    
     titleLabel.textAlignment = NSTextAlignmentLeft;
     titleLabel.textColor = APPGRAYBLACKCOLOR;
     titleLabel.font = [UIFont systemFontOfSize:13];
@@ -363,7 +364,6 @@
 }
 
 - (NSMutableArray *)dataArr{
-
     if(!_dataArr){
         _dataArr = [[NSMutableArray alloc]init];
         switch (self.subDevice.subDeviceType) {

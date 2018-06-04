@@ -15,20 +15,16 @@
 
 @implementation SubdevicEidtNamePage
 
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initUI];
 }
 
-- (instancetype)init
-{
+- (instancetype)init{
     self = [super init];
     if (self) {
         self = [[SubdevicEidtNamePage alloc]initWithNibName:@"GateWayNameEidtPage" bundle:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(ModyfSuc) name:ModfySubdeviceSuc object:nil];
-
     }
     return self;
 }
@@ -39,7 +35,6 @@
     self.nameText.placeholder = Local(@"Set the device name");
     [self.saveButton setTitle:Local(@"Save") forState:UIControlStateNormal];
     self.brief.text = Local(@"");
-    
 }
 
 - (void)ModyfSuc{
@@ -52,18 +47,13 @@
 }
 
 - (IBAction)save:(id)sender {
-
     if(self.nameText.text.length > 0){
         [SVProgressHUD showWithStatus:Local(@"Loading")];
         [self.centerDevice modfySubDeviceInfoWithSubDevice:self.subDevcie event:self.nameText.text withType:ModEventModNameType];
-    }
-    else{
-        
+    }else{
         [SVProgressHUD showInfoWithStatus:Local(@"Please enter a new name for the device")];
         [self.nameText becomeFirstResponder];
     }
-    
-    
 }
 
 - (void)dealloc
