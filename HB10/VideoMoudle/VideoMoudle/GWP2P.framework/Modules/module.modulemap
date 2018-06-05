@@ -1,6 +1,0 @@
-framework module GWP2P {
-  umbrella header "GWP2P.h"
-
-  export *
-  module * { export * }
-}
